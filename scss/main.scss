@@ -1,0 +1,181 @@
+@import "mixins";
+
+:root {
+  --color-white: #fff;
+  --primary-color: #333;
+  --secondary-color: #ddd;
+  --text-color: #f1f1f1;
+  --font-title: "Montserrat Subrayada", sans-serif;
+  --font-body: "Roboto Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+//Header and navbar
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 1rem;
+
+  //Women In Tech in navbar
+  span {
+    transition: all 2s ease-in-out;
+
+    &:hover {
+      color: red;
+      font-weight: bold;
+      transform: scale(1.2) translateX(30px);
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      padding: 1.2rem 0;
+
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+        padding: 1.2rem;
+      }
+
+      &:hover {
+        background: #aaa;
+      }
+    }
+  }
+}
+
+#main {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 2rem;
+
+  .title {
+    padding: 1rem 1rem 0 1rem;
+    text-align: center;
+    line-height: 1.2;
+    background: var(--secondary-color);
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+    }
+
+    figure {
+      padding: 1rem;
+
+      img {
+        filter: sepia(80%);
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        box-shadow: 0 0 5px 1px #444, 0 0 5px 2px #333, 0 0 5px 3px #222;
+      }
+
+      figcaption {
+        font-size: 0.9rem;
+        padding: 1.2rem 2.5rem 0.5rem 2.5rem;
+      }
+    }
+  }
+
+  .content {
+    background: #eee;
+    .woman {
+      font-size: 0.8rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 0.8rem;
+      padding: 1rem 1.5rem;
+
+      //Home section
+      .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background: var(--secondary-color);
+        padding: 1rem;
+
+        h3 {
+          margin: 0 0.5rem 0.5rem 0.5rem;
+        }
+
+        .data {
+          display: flex;
+          @include woman-image;
+
+          .text {
+            flex: 2;
+            text-align: justify;
+            margin: 0.2rem;
+            padding-right: 0.5rem;
+            border-right: 5px solid #888;
+          }
+        }
+      }
+
+      //Quote section
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--secondary-color);
+        padding: 1rem;
+
+        .data {
+          display: flex;
+          .text {
+            flex: 2;
+            font-size: 0.8rem;
+            margin: 0.5rem;
+            padding: 1rem;
+
+            .quote {
+              font-weight: bold;
+            }
+
+            p {
+              margin: 0.5rem;
+            }
+          }
+          @include woman-image;
+        }
+      }
+    }
+
+    .link {
+      padding: 2rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+}
+
+@import "media";

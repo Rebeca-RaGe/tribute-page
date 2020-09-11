@@ -1,0 +1,33 @@
+@mixin woman-image {
+  //My images names
+  $images-list: "ada-lovelace.jpeg" "grace-hopper.jpg" "karen-sparck-jones.jpg"
+    "margaret-hamilton.gif" "betty-holberton.png" "katherin-coleman-johnson.jpg"
+    "hedy-lamarr.jpg" "annie-easley.jpg";
+
+  @each $current-image in $images-list {
+    $i: index($images-list, $current-image);
+    .image-woman-#{$i} {
+      background: url("/img/#{$current-image}") no-repeat center center/cover;
+      flex: 1;
+      width: 5.5rem;
+      filter: grayscale(70%);
+    }
+  }
+}
+
+@mixin woman-image-media($border) {
+  //My images names
+  $images-list: "ada-lovelace.jpeg" "grace-hopper.jpg" "karen-sparck-jones.jpg"
+    "margaret-hamilton.gif" "betty-holberton.png" "katherin-coleman-johnson.jpg"
+    "hedy-lamarr.jpg" "annie-easley.jpg";
+
+  @each $current-image in $images-list {
+    $i: index($images-list, $current-image);
+    .image-woman-#{$i} {
+      background: url("/img/#{$current-image}") no-repeat center 32%/65%;
+      flex: 1;
+      filter: grayscale(70%);
+      border-left: #{$border}px solid #888;
+    }
+  }
+}

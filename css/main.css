@@ -1,0 +1,595 @@
+:root {
+  --color-white: #fff;
+  --primary-color: #333;
+  --secondary-color: #ddd;
+  --text-color: #f1f1f1;
+  --font-title: "Montserrat Subrayada", sans-serif;
+  --font-body: "Roboto Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+header span {
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+header span:hover {
+  color: red;
+  font-weight: bold;
+  -webkit-transform: scale(1.2) translateX(30px);
+          transform: scale(1.2) translateX(30px);
+}
+
+header ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul li {
+  padding: 1.2rem 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 1.2rem;
+}
+
+header ul li:hover {
+  background: #aaa;
+}
+
+#main {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+#main .title {
+  padding: 1rem 1rem 0 1rem;
+  text-align: center;
+  line-height: 1.2;
+  background: var(--secondary-color);
+}
+
+#main .title h1 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+}
+
+#main .title h2 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+#main .title figure {
+  padding: 1rem;
+}
+
+#main .title figure img {
+  -webkit-filter: sepia(80%);
+          filter: sepia(80%);
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 5px 1px #444, 0 0 5px 2px #333, 0 0 5px 3px #222;
+          box-shadow: 0 0 5px 1px #444, 0 0 5px 2px #333, 0 0 5px 3px #222;
+}
+
+#main .title figure figcaption {
+  font-size: 0.9rem;
+  padding: 1.2rem 2.5rem 0.5rem 2.5rem;
+}
+
+#main .content {
+  background: #eee;
+}
+
+#main .content .woman {
+  font-size: 0.8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+}
+
+#main .content .woman .card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: var(--secondary-color);
+  padding: 1rem;
+}
+
+#main .content .woman .card-info h3 {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+#main .content .woman .card-info .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main .content .woman .card-info .data .image-woman-1 {
+  background: url("/img/ada-lovelace.jpeg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card-info .data .image-woman-2 {
+  background: url("/img/grace-hopper.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card-info .data .image-woman-3 {
+  background: url("/img/karen-sparck-jones.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card-info .data .image-woman-4 {
+  background: url("/img/margaret-hamilton.gif") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card-info .data .image-woman-5 {
+  background: url("/img/betty-holberton.png") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card-info .data .image-woman-6 {
+  background: url("/img/katherin-coleman-johnson.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card-info .data .image-woman-7 {
+  background: url("/img/hedy-lamarr.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card-info .data .image-woman-8 {
+  background: url("/img/annie-easley.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card-info .data .text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: justify;
+  margin: 0.2rem;
+  padding-right: 0.5rem;
+  border-right: 5px solid #888;
+}
+
+#main .content .woman .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--secondary-color);
+  padding: 1rem;
+}
+
+#main .content .woman .card .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main .content .woman .card .data .text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+#main .content .woman .card .data .text .quote {
+  font-weight: bold;
+}
+
+#main .content .woman .card .data .text p {
+  margin: 0.5rem;
+}
+
+#main .content .woman .card .data .image-woman-1 {
+  background: url("/img/ada-lovelace.jpeg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card .data .image-woman-2 {
+  background: url("/img/grace-hopper.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card .data .image-woman-3 {
+  background: url("/img/karen-sparck-jones.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card .data .image-woman-4 {
+  background: url("/img/margaret-hamilton.gif") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card .data .image-woman-5 {
+  background: url("/img/betty-holberton.png") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card .data .image-woman-6 {
+  background: url("/img/katherin-coleman-johnson.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card .data .image-woman-7 {
+  background: url("/img/hedy-lamarr.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .woman .card .data .image-woman-8 {
+  background: url("/img/annie-easley.jpg") no-repeat center center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 5.5rem;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#main .content .link {
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header span {
+    padding: 1rem;
+    -webkit-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  header span:hover {
+    color: red;
+    font-weight: bold;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  header nav {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  header nav ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main {
+    max-width: 100%;
+    overflow: hidden;
+    margin: auto;
+    padding: 0;
+  }
+  #main .content .woman {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[auto-fill];
+        grid-template-rows: repeat(auto-fill, 1fr);
+  }
+  #main .content .woman .card-info h3 {
+    margin: 0.5rem;
+  }
+  #main .content .woman .card-info .data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #main .content .woman .card-info .data .image-woman-1 {
+    background: url("/img/ada-lovelace.jpeg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 5px solid #888;
+  }
+  #main .content .woman .card-info .data .image-woman-2 {
+    background: url("/img/grace-hopper.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 5px solid #888;
+  }
+  #main .content .woman .card-info .data .image-woman-3 {
+    background: url("/img/karen-sparck-jones.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 5px solid #888;
+  }
+  #main .content .woman .card-info .data .image-woman-4 {
+    background: url("/img/margaret-hamilton.gif") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 5px solid #888;
+  }
+  #main .content .woman .card-info .data .image-woman-5 {
+    background: url("/img/betty-holberton.png") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 5px solid #888;
+  }
+  #main .content .woman .card-info .data .image-woman-6 {
+    background: url("/img/katherin-coleman-johnson.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 5px solid #888;
+  }
+  #main .content .woman .card-info .data .image-woman-7 {
+    background: url("/img/hedy-lamarr.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 5px solid #888;
+  }
+  #main .content .woman .card-info .data .image-woman-8 {
+    background: url("/img/annie-easley.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 5px solid #888;
+  }
+  #main .content .woman .card-info .data .text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    border-right: 0;
+  }
+  #main .content .woman .card {
+    margin: 0 1rem;
+  }
+  #main .content .woman .card .data {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #main .content .woman .card .data .text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  #main .content .woman .card .data .image-woman-1 {
+    background: url("/img/ada-lovelace.jpeg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 0px solid #888;
+  }
+  #main .content .woman .card .data .image-woman-2 {
+    background: url("/img/grace-hopper.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 0px solid #888;
+  }
+  #main .content .woman .card .data .image-woman-3 {
+    background: url("/img/karen-sparck-jones.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 0px solid #888;
+  }
+  #main .content .woman .card .data .image-woman-4 {
+    background: url("/img/margaret-hamilton.gif") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 0px solid #888;
+  }
+  #main .content .woman .card .data .image-woman-5 {
+    background: url("/img/betty-holberton.png") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 0px solid #888;
+  }
+  #main .content .woman .card .data .image-woman-6 {
+    background: url("/img/katherin-coleman-johnson.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 0px solid #888;
+  }
+  #main .content .woman .card .data .image-woman-7 {
+    background: url("/img/hedy-lamarr.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 0px solid #888;
+  }
+  #main .content .woman .card .data .image-woman-8 {
+    background: url("/img/annie-easley.jpg") no-repeat center 32%/65%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    border-left: 0px solid #888;
+  }
+  #main .content .woman .card:last-child .data .text p {
+    display: inline-block;
+  }
+}
