@@ -208,7 +208,7 @@ header ul li:hover {
 }
 
 #main .content .woman .card-info .data .image-woman-6 {
-  background: url("/img/katherin-coleman-johnson.jpg") no-repeat center center/cover;
+  background: url("../img/katherin-coleman-johnson.jpg") no-repeat center center/cover;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
