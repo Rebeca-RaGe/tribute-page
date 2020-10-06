@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   header {
     flex-direction: column;
 
@@ -33,6 +33,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(auto-fill, 1fr);
+        padding: 0.8rem 0.5rem;
 
         .card-info {
           h3 {
@@ -40,11 +41,13 @@
           }
           .data {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             @include woman-image-media(5);
 
             .text {
-              flex: 2;
+              order: 2;
               border-right: 0;
             }
           }
@@ -54,9 +57,9 @@
         .card {
           margin: 0 1rem;
           .data {
-            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
             .text {
-              flex: 2;
               align-self: flex-start;
             }
 

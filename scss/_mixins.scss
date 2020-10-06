@@ -24,10 +24,11 @@
   @each $current-image in $images-list {
     $i: index($images-list, $current-image);
     .image-woman-#{$i} {
-      background: url("/img/#{$current-image}") no-repeat center 32%/65%;
-      flex: 1;
+      background: url("/img/#{$current-image}") no-repeat center 15%/35%;
       filter: grayscale(70%);
-      border-left: #{$border}px solid #888;
+      order: 1;
+      min-height: 100px;
+      width: auto;
     }
   }
 }
